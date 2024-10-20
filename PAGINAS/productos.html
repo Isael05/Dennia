@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="../CSS/stylesproductos.css"> <link rel="stylesheet" href="../CSS/stylesmenu.css">
+<title>Todos los Productos</title><link rel="shortcut icon" href="../IMG/logopagina-removebg-preview.png" type="image/x-icon">
+<link href="
+    https://cdn.jsdelivr.net/npm/sweetalert2@11.7.5/dist/sweetalert2.min.css
+    " rel="stylesheet"><script src="
+    https://cdn.jsdelivr.net/npm/sweetalert2@11.7.5/dist/sweetalert2.all.min.js
+    "></script>
+</head>
+<body>
+
+  <header>
+    <div style="display: flex;align-items: center;"> <img src="../IMG/logopagina-removebg-preview.png" width="80px"  alt="">
+      	<h1>  <a href="../index.html">TechZone</a></h1> </div>
+ 
+     <nav>
+       <ul>
+         <li><a href="../PAGINAS/novedadestech.html">Novedades en Tecnología</a></li>
+         
+         <li><a href="PAGINAS/productos.html" style="text-decoration: underline;">Todos los Productos</a></li>
+         <li><a href="../PAGINAS/contacto.html">Contacto</a></li>
+         <li><a href="../PAGINAS/registroysesion.html">Iniciar Sesión</a></li> 
+         
+       </ul>
+       <div class="menu"></div>
+       </nav>
+ 
+       <header class="main-header" >
+        
+         
+         </a>
+         <nav id="nav" class="main-nav">
+           
+           <div class="nav-links" style="text-align: center;">
+             <h1 >Menú:</h1>
+             <a class="link-item" href="../PAGINAS/novedadestech.html">Novedades en Tecnología</a>
+             <a class="link-item" href="productos.html">Todos los Productos</a>
+             <a class="link-item" href="../PAGINAS/contacto.html">Contacto</a>
+             <a class="link-item" href="../PAGINAS/registroysesion.html">Iniciar Sesión</a>
+           </div>
+         </nav>
+         <button id="button-menu" class="button-menu">
+           <span></span>
+           <span></span>
+           <span></span>
+         </button>
+       </header>
+ 
+       <script>//  seleccionamos los dos elementos que serán clickables
+ 
+         const toggleButton = document.getElementById("button-menu");
+         const navWrapper = document.getElementById("nav");
+         
+         /* 
+           cada vez que se haga click en el botón 
+           agrega y quita las clases necesarias 
+           para que el menú se muestre.
+         */
+         toggleButton.addEventListener("click", () => {
+           toggleButton.classList.toggle("close");
+           navWrapper.classList.toggle("show");
+         });
+         
+         /* 
+           Cuándo se haga click fuera del contenedor de enlaces 
+           el menú debe esconderse.
+         */
+         
+         navWrapper.addEventListener("click", e => {
+           if (e.target.id === "nav") {
+             navWrapper.classList.remove("show");
+             toggleButton.classList.remove("close");
+           }
+         });</script>
+     
+
+   </header>
+
+   
+
+   <section class="contenedor">
+    <!-- Contenedor de elementos -->
+    <div class="contenedor-items">
+        <div class="item">
+            <span class="titulo-item">TV KTC 32'</span>
+            <img src="../IMG/tvktc32.jpg" alt="" class="img-item">
+             <span class="precio-item">$12.000</span>
+            <button class="boton-item">Agregar al Carrito</button>
+        </div>
+        <div class="item">
+            <span class="titulo-item">PlayStation 5</span>
+            <img src="../IMG/ps5.jpg" alt="" class="img-item">
+            <span class="precio-item">$45.000</span>
+            <button class="boton-item">Agregar al Carrito</button>
+        </div>
+        <div class="item">
+            <span class="titulo-item">Macbook M2 13.6'</span>
+            <img src="../IMG/macbook13,16m2.jpg" alt="" class="img-item">
+            <span class="precio-item">$75.000</span>
+            <button class="boton-item">Agregar al Carrito</button>
+        </div>
+        <div class="item">
+            <span class="titulo-item">Ipad Air Gen 7</span>
+            <img src="../IMG/ipadairpink.jpg" alt="" class="img-item">
+            <span class="precio-item">$48.000</span>
+            <button class="boton-item">Agregar al Carrito</button>
+        </div>
+        <div class="item">
+            <span class="titulo-item">Dell Inspiron 15 EW14a</span>
+            <img src="../IMG/dellinspiron.jpg" alt="" class="img-item">
+            <span class="precio-item">$32.000</span>
+            <button class="boton-item">Agregar al Carrito</button>
+        </div>
+        <div class="item">
+            <span class="titulo-item">Samsung QLED 75'</span>
+            <img src="../IMG/tvsamsung.jpg" alt="" class="img-item">
+            <span class="precio-item">$88.000</span>
+            <button class="boton-item">Agregar al Carrito</button>
+        </div>
+        <div class="item">
+            <span class="titulo-item">Airpods Pro 2nd Gen</span>
+            <img src="../IMG/airpodspro2.jpg" width="100PX" alt="" class="img-item">
+            <span class="precio-item">$14.000</span>
+            <button class="boton-item">Agregar al Carrito</button>
+        </div>
+        <div class="item">
+            <span class="titulo-item">Hp DeskJet Pro</span>
+            <img src="../IMG/impresora.png" alt="" class="img-item">
+            <span class="precio-item">$14.000</span>
+            <button class="boton-item">Agregar al Carrito</button>
+        </div>
+        <div class="item">
+          <span class="titulo-item">Microsoft Surface 2</span>
+          <img src="../IMG/laptop.png" alt="" class="img-item">
+          <span class="precio-item">$27.000</span>
+          <button class="boton-item">Agregar al Carrito</button>
+      </div>
+      <div class="item">
+        <span class="titulo-item">Huawei Matebook Zen 2</span>
+        <img src="../IMG/matebook.jpg" alt="" class="img-item">
+        <span class="precio-item">$32.000</span>
+        <button class="boton-item">Agregar al Carrito</button>
+    </div>
+    <div class="item">
+      <span class="titulo-item">TCL OLED 55'</span>
+      <img src="../IMG/tv1.png" alt="" class="img-item">
+      <span class="precio-item">$42.000</span>
+      <button class="boton-item">Agregar al Carrito</button>
+  </div>
+  <div class="item">
+    <span class="titulo-item">JBL Clip 2</span>
+    <img src="../IMG/jblclip4.jpg" alt="" class="img-item">
+    <span class="precio-item">$5.000</span>
+    <button class="boton-item">Agregar al Carrito</button>
+</div>
+       
+    </div>
+    <!-- Carrito de Compras -->
+    <div class="carrito" id="carrito">
+        <div class="header-carrito">
+            <h2>Carrito de Compras</h2>
+        </div>
+
+        <div class="carrito-items">
+         
+        </div>
+        <div class="carrito-total">
+            <div class="fila">
+                <strong>Total</strong>
+                <span class="carrito-precio-total">
+                
+                </span>
+            </div>
+            <button class="btn-pagar" onclick="hola()">¡Pagar! <i class="fa-solid fa-bag-shopping"></i> </button>
+        </div>
+    </div>
+</section>
+<script src="../JS/app.js"></script>
+
+<script>function hola () {
+  Swal.fire({
+    confirmButtonColor:"orangered" ,
+    confirmButtonText: "¡Bien!",
+    icon: 'success',
+    iconColor: "orangered",
+    title: '¡Gracias por Comprar en TechZone!',
+    text: 'Tus artículos llegaran lo antes posible',
+    
+  })
+  
+  
+}; </script>
+
+<footer>
+  <h3>Marcas Afiliadas:</h3>
+
+  <div style="display: flex;justify-content: space-between;width: 45%;">
+<img src="../IMG/1200px-HP_logo_2012.svg.png" alt="">
+<img src="../IMG/Dell_logo_2016.svg.png" alt="">
+<img src="../IMG/amd-logo-vector.svg" alt="">
+
+
+  </div>
+  <hr style="width: 100%;">
+  <div style="display: flex;align-items: center;">
+    <img src="../IMG/logopagina-removebg-preview.png" alt="">
+    <p>&copy; 2023  TechZone Todos los derechos Reservados <br> isael056789@gmail.com, Ultima modificación 20/5/2023 </p> 
+  </div>
+  
+</footer>
+
+
+</body>
+</html>

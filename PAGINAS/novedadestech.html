@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Novedades</title> <link rel="stylesheet" href="../CSS/stylesnovedades.css"> 
+    <link rel="shortcut icon" href="../IMG/logopagina-removebg-preview.png" type="image/x-icon">
+    <link rel="stylesheet" href="../CSS/stylesnoticias.css" /> <link rel="stylesheet" href="../CSS/stylesmenu.css">
+</head>
+<body>
+    <header>
+        <div style="display: flex;align-items: center;"> <img src="../IMG/logopagina-removebg-preview.png" width="80px"  alt="">
+            	<h1>  <a href="../index.html">TechZone</a></h1>
+         </div>
+     
+             <nav>
+                 <ul>
+                     <li><a href="novedadestech.html" style="text-decoration: underline;">Novedades en Tecnología</a></li>
+           
+                     <li><a href="productos.html">Todos los Productos</a></li>
+                     <li><a href="contacto.html" >Contacto</a></li>
+                     <li><a href="registroysesion.html" >Iniciar Sesión</a></li> 
+                     
+                 </ul> 
+               </nav>
+
+
+               <header class="main-header" >
+       
+        
+               </a>
+               <nav id="nav" class="main-nav">
+          
+                <div class="nav-links" style="text-align: center;">
+                  <h1 >Menú:</h1>
+                  <a class="link-item" href="novedadestech.html" style="text-decoration: underline;">Novedades en Tecnología</a>
+              
+                  <a class="link-item" href="productos.html">Todos los Productos</a>
+                  <a class="link-item" href="contacto.html">Contacto</a>
+                  <a class="link-item" href="registroysesion.html">Iniciar Sesión</a>
+                </div>
+              </nav>
+              <button id="button-menu" class="button-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+              </button>
+             </header>
+       
+             <script>//  seleccionamos los dos elementos que serán clickables
+       
+               const toggleButton = document.getElementById("button-menu");
+               const navWrapper = document.getElementById("nav");
+               
+               /* 
+                 cada vez que se haga click en el botón 
+                 agrega y quita las clases necesarias 
+                 para que el menú se muestre.
+               */
+               toggleButton.addEventListener("click", () => {
+                 toggleButton.classList.toggle("close");
+                 navWrapper.classList.toggle("show");
+               });
+               
+               /* 
+                 Cuándo se haga click fuera del contenedor de enlaces 
+                 el menú debe esconderse.
+               */
+               
+               navWrapper.addEventListener("click", e => {
+                 if (e.target.id === "nav") {
+                   navWrapper.classList.remove("show");
+                   toggleButton.classList.remove("close");
+                 }
+               });</script>
+           
+             
+     
+         </header>
+
+
+         <div class="swiper mySwiper"  >
+            <div class="swiper-wrapper">
+              <div class="swiper-slide"><div class="contenedorslide" style="background: url(../IMG/noticia1.webp);background-repeat: no-repeat;background-size: cover;">
+            <div class="contenidoslide">                       
+<h1>Estudiantes crean un robot utilizando ChatGPT</h1>
+
+            </div>
+            </div></div>
+
+
+              <div class="swiper-slide"><div class="contenedorslide" style="background: url(../IMG/4060ti.webp);background-size: cover;" >
+                <div class="contenidoslide">
+
+                  <h1>Nvidia lanza su nueva RTX 4060 al mercado</h1>
+                </div>
+            
+            </div></div>
+
+
+             
+
+
+              <div class="swiper-slide"><div class="contenedorslide" style="background: url(../IMG/chrome.webp);background-size: cover; "> 
+                <div class="contenidoslide">
+
+                  <h1>Chrome decide eliminar completamente las Cookies de las webs</h1>
+                </div>
+            </div></div>
+
+
+              <div class="swiper-slide"><div class="contenedorslide" style="background: url(../IMG/elonma.webp);background-size: cover; ">
+                <div class="contenidoslide">
+
+                  <h1>Elon Musk Intentará reemplazar WhatsApp por Twitter</h1>
+                </div>
+            
+            </div></div>
+
+            <div class="swiper-slide"><div class="contenedorslide" style="background: url(../IMG/applevr.webp);background-size: cover; ">
+              <div class="contenidoslide">
+
+                <h1>Apple patenta sus propias gafas de Realidad Virtual</h1>
+              </div>
+          
+          </div></div>
+            
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+          </div>
+
+          <script src="../JS/noticias.js"></script>
+
+          <script>
+            var swiper = new Swiper(".mySwiper", {
+              pagination: {
+                el: ".swiper-pagination",
+                type: "progressbar",
+              },
+              navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+              },
+            });
+          </script>
+
+<footer>
+  <h3>Marcas Afiliadas:</h3>
+
+  <div style="display: flex;justify-content: space-between;width: 45%;">
+<img src="../IMG/1200px-HP_logo_2012.svg.png" alt="">
+<img src="../IMG/Dell_logo_2016.svg.png" alt="">
+<img src="../IMG/amd-logo-vector.svg" alt="">
+
+
+  </div>
+  <hr style="width: 100%;">
+  <div style="display: flex;align-items: center;">
+    <img src="../IMG/logopagina-removebg-preview.png" alt="">
+    <p>&copy; 2023  TechZone Todos los derechos Reservados <br> isael056789@gmail.com, Ultima modificación 20/5/2023 </p> 
+  </div>
+  
+</footer>
+
+</body>
+</html>

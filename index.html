@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html >
+<head>
+	<meta charset="UTF-8">
+	<title>Franklin Inversores</title>
+  <link rel="shortcut icon" href="imgnw/Captura_de_pantalla_2024-10-20_120850-removebg-preview.png" type="image/x-icon">
+	<link rel="stylesheet" href="CSS/estilosliderindex.css" />
+  <link rel="stylesheet" href="CSS/stylesindex.css">
+   <link rel="stylesheet" href="CSS/stylesmenu.css">
+  <script src="
+  https://cdn.jsdelivr.net/npm/sweetalert2@11.7.5/dist/sweetalert2.all.min.js
+  "></script>
+  <link href="
+  https://cdn.jsdelivr.net/npm/sweetalert2@11.7.5/dist/sweetalert2.min.css
+  " rel="stylesheet">
+</head>
+<body>
+
+	<header>
+    <img src="imgnw/Captura_de_pantalla_2024-10-20_120850-removebg-preview.png" alt="">
+   	<h1>  <a href="index.html">FRANKLIN INVERSORES</a></h1> 
+
+		<nav>
+			<ul>
+				<li><a href="PAGINAS/novedadestech.html">Sobre Nosotros</a></li>
+      
+				<li><a href="PAGINAS/productos.html">Todos los Servicios</a></li>
+				<li><a href="PAGINAS/contacto.html">Contacto</a></li>
+				<li><a href="PAGINAS/registroysesion.html">Iniciar Sesión/Registrarse</a></li> 
+				
+			</ul>
+      <div class="menu"></div>
+		  </nav>
+
+      <header class="main-header" >
+       
+          
+        </a>
+        <nav id="nav" class="main-nav">
+          
+          <div class="nav-links" style="text-align: center;">
+            <h1 >Menú:</h1>
+            <a class="link-item" href="PAGINAS/novedadestech.html">Sobre Nosotros</a>
+             <a class="link-item" href="">Todos los Productos</a>
+            <a class="link-item" href="PAGINAS/contacto.html">Contacto</a>
+            <a class="link-item" href="PAGINAS/registroysesion.html">Iniciar Sesión</a>
+          </div>
+        </nav>
+        <button id="button-menu" class="button-menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </header>
+
+      <script>//  seleccionar lo do elemento
+
+        const toggleButton = document.getElementById("button-menu");
+        const navWrapper = document.getElementById("nav");
+        
+        /* 
+          cada vez que se haga click en el botón 
+          agrega y quita las clases necesarias 
+          para que el menú se muestre
+        */
+        toggleButton.addEventListener("click", () => {
+          toggleButton.classList.toggle("close");
+          navWrapper.classList.toggle("show");
+        });
+        
+        /* 
+          Cuándo se haga click fuera del contenedor de enlaces 
+          el menú debe esconderse
+        */
+        
+        navWrapper.addEventListener("click", e => {
+          if (e.target.id === "nav") {
+            navWrapper.classList.remove("show");
+            toggleButton.classList.remove("close");
+          }
+        });</script>
+		
+
+	</header>
+	
+	
+ 
+  <div class="contenedorslider" >
+    <button id="prev">←</button>
+    <div class="slider">
+      <div class="slide current">
+        <div class="content">
+          <h1 class="notaslider">¡Nuevo!</h1>
+         <img src="IMG/galaxy2.webp" width="100%" height="600" alt="" style="  border-radius: 5%;">
+        </div>
+      </div>
+      <div class="slide">
+        <div class="content">
+          <h1 class="notaslider">¡Nuevo!</h1>
+         <img src="IMG/popo.jpg " width="100%" alt=""style="  border-radius: 5%;">
+        </div>
+      </div>
+      <div class="slide">
+        <div class="content">
+          <h1 class="notaslider">¡Nuevo!</h1>
+         <img src="IMG/tvsamsung.jpg" width="100%" alt=""style="  border-radius: 5%;">
+        </div>
+      </div>
+      <div class="slide">
+        <div class="content">
+          <h1 class="notaslider">¡Nuevo!</h1>
+         <img src="IMG/ipadair.png" width="100%" alt=""style="  border-radius: 5%;"s>
+        </div>
+      </div>
+     
+     
+    </div>
+  
+    <button id="next">→</button>
+  </div>
+
+
+  
+
+	
+
+<div class="todo">
+	
+  <section class="destacados">
+    <h2 class="titulo">Lo mas Popular de la Semana:</h2>
+    <article  > 
+      <img src="IMG/tv1.png" width="250px" alt="Producto 1">
+      <h3>TV TCL OLED 55´</h3>
+      <p>RD$ 38,000</p>
+      <p class="boton" onclick="compra()">comprar ahora</p>
+    </article>
+    <article >
+      <img src="IMG/impresora.png"  width="250px" alt="Producto 2">
+        <h3>Impresora Laser DeskJet</h3>
+        <p>RD$ 14,000</p>
+      <p class="boton" onclick="compra()">comprar ahora</p>
+    </article >
+    <article >
+      <img src="IMG/laptop.png" width="250px" alt="Producto 3">
+      <h3 style="margin-top: 7vh;">Microsoft Surface 2</h3>
+      <p>RD$ 27,000</p>
+      <p class="boton" onclick="compra()">comprar ahora</p>
+    </article>
+    <article >
+      <img src="IMG/laptop.png" width="250px" alt="Producto 3">
+      <h3 style="margin-top: 7vh;">Microsoft Surface 2</h3>
+      <p>RD$ 27,000</p>
+      <p class="boton" onclick="compra()">comprar ahora</p>
+    </article>
+  </section>
+
+     
+
+
+
+
+
+
+
+
+
+   
+    <script>const slides = document.querySelectorAll('.slide');
+      const next = document.querySelector('#next');
+      const prev = document.querySelector('#prev');
+      
+      let current = 0;
+      
+      function reset() {
+          slides.forEach(slide => slide.classList.remove('current'));
+      }
+      
+      function nextSlide() {
+          reset();
+          current++;
+          if (current === slides.length) current = 0;
+          slides[current].classList.add('current');
+      }
+      
+      function prevSlide() {
+          reset();
+          current--;
+          if (current < 0) current = slides.length -1;
+          slides[current].classList.add('current');
+      }
+      
+      next.addEventListener('click', nextSlide);
+      prev.addEventListener('click', prevSlide);
+      setInterval(nextSlide,8000);
+      </script>
+
+<div><h2 class="titulo">Agregados Recientemente:</h2>
+
+  <div class="swiper mySwiper">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide">
+      <article>
+        <img src="IMG/impresora.png"  alt="">
+        <h5>Impresora HP Laser DeskJet</h5>
+        <h4>RD$ 14,000</h4>
+        <p>(ITBIS Incluido)</p>
+        <p class="boton" onclick="compra()">comprar ahora</p>
+    </article>
+    <article>
+      <img src="IMG/tv1.png"  alt="">
+      <h5>TV TCL 55'</h5>
+      <h4>RD$ 42,000</h4>
+      <p>(ITBIS Incluido)</p>
+      <p class="boton" onclick="compra()">comprar ahora</p>
+  </article>
+  <article>
+    <img src="IMG/ps5.jpg"  alt="">
+    <h5>PlayStation 5</h5>
+    <h4>RD$ 45,000</h4>
+    <p>(ITBIS Incluido)</p>
+    <p class="boton" onclick="compra()">comprar ahora</p>
+  </article>
+  
+  </div>
+  
+  <div class="swiper-slide">
+    <article>
+      <img src="IMG/tvktc32.jpg"  alt="">
+      <h5>TV KTC 32'</h5>
+      <h4>RD$ 12,000</h4>
+      <p>(ITBIS Incluido)</p>
+      <p class="boton" onclick="compra()">comprar ahora</p>
+  </article>
+  <article>
+    <img src="IMG/macbook13,16m2.jpg"  alt="">
+    <h5>MacBook Air M2</h5>
+    <h4>RD$ 98,000</h4>
+    <p>(ITBIS Incluido)</p>
+    <p class="boton" onclick="compra()">comprar ahora</p>
+  </article>
+  <article>
+  <img src="IMG/airpodspro2.jpg"  alt="">
+  <h5>Airpods Pro 2nd Gen</h5>
+  <h4>RD$ 14,000</h4>
+  <p>(ITBIS Incluido)</p>
+  <p class="boton" onclick="compra()">comprar ahora</p>
+  </article>
+  
+  </div>
+    
+  </div>
+  <div class="swiper-button-next" style="color: whitesmoke"></div>
+  <div class="swiper-button-prev" style="color: whitesmoke;"></div>
+  </div>
+  </div>
+
+<script src="JS/slider.js"></script>
+
+
+<script>function compra () {
+  Swal.fire({
+    confirmButtonColor:"orangered" ,
+    confirmButtonText: "¡Bien!",
+    icon: 'success',
+    iconColor: "orangered",
+    title: '¡Gracias por Comprar en TechZone!',
+    text: 'Tus artículos llegaran lo antes posible',
+    
+  })
+  
+               }; </script>
+
+
+
+<script>
+var swiper = new Swiper(".mySwiper", {
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+});
+</script>
+
+
+
+</div>
+
+
+
+	
+	<footer>
+    <h3>Marcas Afiliadas:</h3>
+
+    <div style="display: flex;justify-content: space-between;width: 45%;">
+<img src="IMG/1200px-HP_logo_2012.svg.png" alt="">
+<img src="IMG/Dell_logo_2016.svg.png" alt="">
+<img src="IMG/amd-logo-vector.svg" alt=""> 
+
+
+    </div>
+  <hr style="width: 100%;">
+    
+<div style="display: flex;align-items: center;">
+  <img src="IMG/logopagina-removebg-preview.png" alt="">
+  <p>&copy; 2023  TechZone Todos los derechos Reservados <br> isael056789@gmail.com, Ultima modificación 20/5/2023 </p> 
+</div>
+    
+
+    
+	</footer>
+</body>
+</html>

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <link rel="shortcut icon" href="../IMG/logopagina-removebg-preview.png" type="image/x-icon">
+    <title>¡Contactanos!</title> <link rel="stylesheet" href="../CSS/stylecontacto.css">
+    <link rel="stylesheet" href="../CSS/stylesmenu.css"> <link href="
+    https://cdn.jsdelivr.net/npm/sweetalert2@11.7.5/dist/sweetalert2.min.css
+    " rel="stylesheet"><script src="
+    https://cdn.jsdelivr.net/npm/sweetalert2@11.7.5/dist/sweetalert2.all.min.js
+    "></script>
+</head>
+<body>
+
+    <header>
+        <div style="display: flex;align-items: center;"> <img src="../IMG/logopagina-removebg-preview.png" width="80px"  alt="">
+            	<h1>  <a href="../index.html">TechZone</a></h1>
+         </div>
+     
+             <nav>
+                 <ul>
+                     <li><a href="novedadestech.html">Novedades en Tecnología</a></li>
+                   
+                     <li><a href="productos.html">Todos los Productos</a></li>
+                     <li><a href="contacto.html" style="text-decoration: underline;">Contacto</a></li>
+                     <li><a href="registroysesion.html" >Iniciar Sesión</a></li> 
+                     
+                 </ul>
+               </nav>
+
+               
+               <nav id="nav" class="main-nav">
+          
+                <div class="nav-links" style="text-align: center;">
+                  <h1 >Menú:</h1>
+                  <a class="link-item" href="novedadestech.html">Novedades en Tecnología</a>
+               
+                  <a class="link-item" href="productos.html">Todos los Productos</a>
+                  <a class="link-item" href="contacto.html">Contacto</a>
+                  <a class="link-item" href="registroysesion.html" style="text-decoration: underline;">Iniciar Sesión</a>
+                </div>
+              </nav>
+              <button id="button-menu" class="button-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+              </button>
+             
+      <script>//  seleccionamos los dos elementos que serán clickables
+
+        const toggleButton = document.getElementById("button-menu");
+        const navWrapper = document.getElementById("nav");
+        
+        /* 
+          cada vez que se haga click en el botón 
+          agrega y quita las clases necesarias 
+          para que el menú se muestre.
+        */
+        toggleButton.addEventListener("click", () => {
+          toggleButton.classList.toggle("close");
+          navWrapper.classList.toggle("show");
+        });
+        
+        /* 
+          Cuándo se haga click fuera del contenedor de enlaces 
+          el menú debe esconderse.
+        */
+        
+        navWrapper.addEventListener("click", e => {
+          if (e.target.id === "nav") {
+            navWrapper.classList.remove("show");
+            toggleButton.classList.remove("close");
+          }
+        });</script>
+             
+     
+         </header>
+
+
+
+       <main>  <div class="login">
+        <div class="login__content">
+            <div class="login__img">
+           
+            </div>
+            </div>
+
+            <div class="login__forms">
+                <form   action="https://formspree.io/f/xwkjjbkp"
+                method="POST" class="login__registre" id="login-in">
+                    <h1 class="login__title" style="color: orangered;">¡Contactanos! </h1>
+
+                    <div class="login__box">
+                        <i class='bx bx-user login__icon'></i>
+                        <input type="text" placeholder="Nombre y Apellidos" name="Nombre y Apellidos:" class="login__input">
+                    </div>
+
+                    <div class="login__box">
+                        <i class='bx bx-lock-alt login__icon'></i>
+                        <input type="text" placeholder="Correo" name="Correo del Cliente:" class="login__input">
+                    </div>
+
+                    <div class="login__box">
+                        <i class='bx bx-lock-alt login__icon'></i>
+                        <input type="text" placeholder="Numero de Telefono" name="Telefono del Cliente:" class="login__input">
+                    </div>
+
+                    <div class="login__box">
+                        <i class='bx bx-lock-alt login__icon'></i>
+                        <input type="text" placeholder="Dirección" name="Dirección del Cliente:" class="login__input">
+                    </div>
+
+                    <div class="login__box">
+                        <i class='bx bx-lock-alt login__icon'></i>
+                        <input type="text" placeholder="Identificación" name="Cedula del Cliente:" class="login__input">
+                    </div>
+
+             
+
+                    <button  onclick="hola()" type="submit"  class="login__button" >Enviar</button>
+
+                   
+                </form>
+
+             <script>function hola () {
+Swal.fire({
+  confirmButtonColor:"orangered" ,
+  confirmButtonText: "¡Bien!",
+  icon: 'success',
+  iconColor: "orangered",
+  title: '¡Gracias!',
+  text: 'Responderemos lo Antes Posible',
+  
+})
+
+
+             };
+                
+                
+                </script>
+
+
+
+            </div>
+        </div>
+    </div>
+</main>
+
+
+
+</body>
+</html>
